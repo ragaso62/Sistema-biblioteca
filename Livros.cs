@@ -2,19 +2,24 @@
 {
     private double _preco;
     private double _alugel;
+    private int _quantidade;
     public string Nome {  get; set; }
     public int Codigo { get; set; }
-    public int quantidade
+    public int Quantidade
     {
         get
         {
-            return quantidade;
+            return _quantidade;
         }
         set
         {
             if(value <= 0)
             {
                 Console.WriteLine("Valor negativo não aceitado");
+            }
+            else
+            {
+                _quantidade = value;
             }
         }
     }
@@ -29,6 +34,10 @@
             if (value <= 0 || value > 10000)
             {
                 Console.WriteLine("o valor escrito é maior que 10000 ou menor que 0, por favor insira um valor valido");
+            }
+            else
+            {
+               _preco = value;
             }
         }
     }
@@ -48,12 +57,15 @@
             {
                 Console.WriteLine("O valor do aluguel esta muito auto, por favor insira um valor abaixo de 100");
             }
+            else
+            {
+                _alugel = value;
+            }
         }
     }
     public void descontoLivro(int valor)
     {
-       double desconto = Preco * valor / 100;
-        Preco -= desconto;
+        Preco = Preco - (Preco * valor / 100.0);
     }
     public void aumentarPreco(int valor)
     {
@@ -66,6 +78,6 @@
 
     public void AlterarEstoque(int valor)
     {
-        quantidade = valor;
+        Quantidade = valor;
     }
 }
