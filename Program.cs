@@ -7,7 +7,7 @@ livros.Add(new Livros
     Preco = 12.00,
     Alugel = 13,
     Codigo = 1,
-    quantidade = 5,
+    Quantidade = 5,
 });
 livros.Add(new Livros
 {
