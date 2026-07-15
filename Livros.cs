@@ -67,11 +67,11 @@
     {
         Preco = Preco - (Preco * valor / 100.0);
     }
-    public void aumentarPreco(int valor)
+    public void aumentarPreco(double valor)
     {
         Preco += valor;
     }
-    public void reduzirPreco(int valor)
+    public void reduzirPreco(double valor)
     {
         Preco -= valor;
     }
