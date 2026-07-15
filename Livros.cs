@@ -76,8 +76,12 @@
         Preco -= valor;
     }
 
-    public void AlterarEstoque(int valor)
+    public void aumentarEstoque(int valor)
     {
-        Quantidade = valor;
+        Quantidade += valor;
+    }
+    public void reduzirEstoque(int valor)
+    {
+        Quantidade -= valor;
     }
 }
