@@ -91,7 +91,7 @@ else if (escolha == 1)
         Console.WriteLine($"livro encontrado {encontrar.Nome}");
         Console.WriteLine("quantos livros deseja adicionar ao estoque?");
         int valor = int.Parse(Console.ReadLine());
-        encontrar.AlterarEstoque(valor);
+        encontrar.aumentarEstoque(valor);
         Console.WriteLine($"O {encontrar.Nome} agora tem {encontrar.Quantidade} unidades em estoque");
     }
 }else if (escolha == 5)
@@ -117,7 +117,7 @@ else if (escolha == 1)
             Console.WriteLine($"livro encontrado {encontrar.Nome}");
             Console.WriteLine("quantos livros deseja comprar?");
             int valor = int.Parse(Console.ReadLine());
-            encontrar.Quantidade -= valor;
+            encontrar.reduzirEstoque(valor);
             Console.WriteLine($"O {encontrar.Nome} agora tem {encontrar.Quantidade} unidades em estoque");
         }
     }else if (resposta == "n" || resposta == "N" || resposta == "não")
